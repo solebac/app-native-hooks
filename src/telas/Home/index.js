@@ -5,9 +5,14 @@ import Topo from './componentes/Topo';
 const Home = () => {
   return (
     <>
-      <Topo />
-      <Produtores />
+      <Produtores topo={Topo} />
     </>
   );
 };
 export default Home;
+
+{
+  /**Old
+    <Topo />
+    <Produtores/> */
+}
