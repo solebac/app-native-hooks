@@ -1,11 +1,13 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import {FlatList, StyleSheet, Text} from 'react-native';
 import useProdutores from '../../../hooks/useProdutores';
+import {carregaProdutores} from '../../../servicos/carregaDados';
 import Produtor from './Produtor';
 
 export default function Produtores({topo: Topo}) {
   const [produtores, lista] = useProdutores();
   const TopoLista = () => {
+    ////ListHeaderComponent={() => <Text>{produtores}</Text>}></FlatList>
     return (
       <>
         <Topo />
